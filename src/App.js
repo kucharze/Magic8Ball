@@ -7,6 +7,12 @@ function App() {
   const [responseList, setResponseList] = useState(responses);
   const [selection, setSelection] = useState(0);
 
+  useEffect(() => {}, [selection]);
+
+  const selectQuote = () => {
+    const random = 0;
+  };
+
   return (
     <div className="App">
       <h1>Magic eight ball</h1>
