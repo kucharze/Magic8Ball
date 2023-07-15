@@ -10,6 +10,7 @@ function App() {
 
   useEffect(() => {
     console.log("Changing response");
+    setResponse(responses[selection]);
   }, [selection]);
 
   const selectQuote = () => {
@@ -21,7 +22,7 @@ function App() {
   return (
     <div className="App">
       <h1>Magic eight ball</h1>
-      <Display item={responses[0]} />
+      <Display item={response} />
       <button
         className="ask"
         onClick={(e) => {
