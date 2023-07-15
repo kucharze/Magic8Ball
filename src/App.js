@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import Display from "./components/Display";
 
 function App() {
-  const [response, setResponseList] = useState(responses[0]);
+  const [response, setResponse] = useState(responses[0]);
   const [selection, setSelection] = useState(0);
   // const [response, setResponse] = useState[responseList[selection]];
 
