@@ -4,19 +4,25 @@ import { useState, useEffect } from "react";
 import Display from "./components/Display";
 
 function App() {
-  const [response, setResponse] = useState(responses[0]);
+  const [response, setResponse] = useState("8");
   const [selection, setSelection] = useState(0);
+  const [displayed, setDisplayed] = useState(false);
   // const [response, setResponse] = useState[responseList[selection]];
 
   useEffect(() => {
-    console.log("Changing response");
-    setResponse(responses[selection]);
+    // console.log("Changing response");
+    if (displayed) {
+      setResponse(responses[selection]);
+    } else {
+      setResponse("8");
+    }
   }, [selection]);
 
   const selectQuote = () => {
     const random = Math.floor(Math.random() * (responses.length - 0) + 0);
     console.log(random);
     setSelection(random);
+    setDisplayed(true);
   };
 
   return (
