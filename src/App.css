@@ -16,6 +16,14 @@
   }
 }
 
+.ask {
+  margin-top: 10px;
+  font-size: 30px;
+  border-radius: 25px;
+  width: 300px;
+  height: 50px;
+}
+
 .display {
   font-size: 40px;
   border: solid green;

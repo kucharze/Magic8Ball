@@ -11,6 +11,7 @@ function App() {
     <div className="App">
       <h1>Magic eight ball</h1>
       <Display item={responseList[0]} />
+      <button className="ask">Ask a question</button>
     </div>
   );
 }
