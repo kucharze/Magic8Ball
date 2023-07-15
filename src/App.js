@@ -10,14 +10,23 @@ function App() {
   useEffect(() => {}, [selection]);
 
   const selectQuote = () => {
-    const random = 0;
+    const random = Math.floor(Math.random() * (responseList.length - 0) + 0);
+    console.log(random);
+    setSelection(random);
   };
 
   return (
     <div className="App">
       <h1>Magic eight ball</h1>
       <Display item={responseList[0]} />
-      <button className="ask">Ask a question</button>
+      <button
+        className="ask"
+        onClick={(e) => {
+          selectQuote();
+        }}
+      >
+        Ask a question
+      </button>
     </div>
   );
 }
